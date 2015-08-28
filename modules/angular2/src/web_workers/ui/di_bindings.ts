@@ -1,5 +1,7 @@
 // TODO (jteplitz602): This whole file is nearly identical to core/application.ts.
 // There should be a way to refactor application so that this file is unnecessary. See #3277
+import {AnimationBuilder} from 'angular2/src/animate/animation_builder';
+import {BrowserDetails} from 'angular2/src/animate/browser_details';
 import {Injector, bind, Binding} from "angular2/di";
 import {Reflector, reflector} from 'angular2/src/core/reflection/reflection';
 import {
@@ -140,7 +142,9 @@ function _injectorBindings(): any[] {
     MessageBasedXHRImpl,
     MessageBasedRenderer,
     ServiceMessageBrokerFactory,
-    ClientMessageBrokerFactory
+    ClientMessageBrokerFactory,
+    BrowserDetails,
+    AnimationBuilder,
   ];
 }
 
